@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+
+ width: 90vw;
+ height: 60vh;
+font-size: 1px;
+}
+
+.contenedor{
+    height: auto;
+   display: flex;
+   flex-flow: row wrap;
+    outline: 1px solid red;
+}
+.caja{
+    width: 300em;
+    height: 200em;
+    border: 3px solid black;
+}
