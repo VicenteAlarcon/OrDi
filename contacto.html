@@ -17,20 +17,23 @@
 <body>
   <div class="grid_contacto">
     <header>
-      <div class="principal_header">
+      <div class="principal_header"> 
         <div class="left_header">
           <h3>Life Style Exclusive Hotel</h3>
           <a href="#">Promociones</a>
           <a href="#">Tienda Online</a>
         </div>
-        <img src="/media/img/Logo.png" alt="logo" width="240">
+        <div class="center"> 
+          <img src="/media/img/Logo.png" alt="logo" width="240"> 
+        </div>
+       
         <div class="right_header">
           <h3>654 321 698 - 961 478 523</h3>
-          <a href="#">English</a>
-          <a href="localizacion.html">Localización</a>
+          <a href="">English</a>
+          <a href="/localizacion.html">Localización</a>
         </div>
       </div>
-    </header>
+    </header> 
     <nav>
       <ul>
         <li> <a href="/index.html" >HOME</a></li>
@@ -56,19 +59,19 @@
 <form action="/contacto.php" method="get">
   <div class="input1">
  <label for="nombre">Nombre</label>
- <input type="text" id="nombre"> 
+ <input type="text" name="nombre" minlength="5" maxlength="40" required pattern="[A-Za-z]+"> 
 </div>
 <div class="input2">           
  <label for="ciudad">Ciudad <span>Opcional</span></label>
- <input type="text" id="ciudad">
+ <input type="text" name="ciudad" required pattern="[A-Za-z]+">
  </div>
  <div class="input3"> 
  <label for="mail">Email</label>
- <input type="email" id="mail">
+ <input type="email" name="mail" required pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
  </div>
 <div class="input4">
  <label for="telefono">Teléfono</label>
- <input type="tel" id="telefono">
+ <input type="tel" name="telefono" minlength="6" required pattern="[0-9]+">
 </div>
 <div class="consulta">
    <label for="consulta">Consulta</label>
@@ -182,7 +185,7 @@
         </div>
 
       </div>
-      <p>Actividad realizada para el módulo de lenguajes de marcas. Curso 2022/2023. Vicente Alarcón González</p>
+      <p class="nombre">Actividad realizada para el módulo de lenguajes de marcas. Curso 2022/2023. Vicente Alarcón González</p>
 
     
 

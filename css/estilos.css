@@ -4,7 +4,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
 body {
@@ -35,8 +34,8 @@ h4 {
         'f f f f'
         'f f f f';
     grid-template-columns: repeat(3, 33%);
-    grid-template-rows: 19% 5% 40% 35% 20% 40% 30% 30% 30% 30%;
-    width: 100%;
+    grid-template-rows: 16% 5% 40% 35% 20% 40% 30% 30% 30% 30%;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -50,18 +49,6 @@ header {
 
 }
 
-/*header{
-    width: 100%;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    background-color: #FFF;
-    z-index: 25;
-    font-family: 'Oswald', sans-serif;
-   
-  }*/
-
-
 .principal_header {
 
     border-bottom: 1px solid lightgrey;
@@ -72,25 +59,19 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-
-
-
 }
 
 .left_header {
     width: 20%;
     margin-top: 4%;
-
-    /*display: flex;
-    align-items: center;
-    flex-flow: row wrap;*/
-
 }
 
 .center {
+    width: 21%;
     margin-top: 2%;
+
 }
+
 
 .left_header h3 {
     font-family: 'Playfair Display', serif;
@@ -117,19 +98,9 @@ header {
 }
 
 .right_header {
-    margin-top: 3%;
+    margin-top: 4%;
 
 }
-
-.right_header ul li {
-    list-style: none;
-    display: inline-block;
-    float: right;
-    padding: 0px 10px;
-
-}
-
-
 
 /* utilizo selector hijo directo para seleccionar el primer enlace y colocarle su correspondiente icono */
 .right_header>a {
@@ -166,16 +137,18 @@ nav {
     font-family: "droid", sans-serif;
     position: fixed;
     width: 100%;
-    height: 6%;
+    height: 7%;
     top: 14%;
     background-color: white;
-    z-index: 2;
+    z-index: 20;
 
 }
 
 nav ul li {
+
     display: inline;
     padding: 11em;
+
 
 }
 
@@ -202,9 +175,10 @@ nav ul li>a:hover {
     background-size: cover;
     grid-area: s;
     position: fixed;
-    bottom: 30%;
+    bottom: 11%;
     width: 100%;
-    height: 50%;
+    height: 100%;
+
 }
 
 .aviso {
@@ -219,10 +193,8 @@ nav ul li>a:hover {
     /************/
     width: 48em;
     height: 15%;
-    /* grid-column: 2/4;
-    grid-row: 1/2;*/
     grid-area: s;
-    z-index: 1;
+    z-index: 10;
     background-color: white;
     box-shadow: 1px 1px 30px gray;
 
@@ -234,7 +206,7 @@ nav ul li>a:hover {
     margin: 8% 25%;
     /*margin para posicionar la imagen traveller*/
     grid-area: s;
-    z-index: 1;
+    z-index: 10;
 }
 
 .index {
@@ -245,29 +217,21 @@ nav ul li>a:hover {
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
-    /*  display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(10, 1fr);  */
-    z-index: 1;
-
-
+    z-index: 10;
 }
 
 .principal_main {
     text-align: center;
-
-
-
 }
 
-.principal_main>h1 {
+.principal_main h1 {
     margin-bottom: 1%;
     font-family: "Droid", sans-serif;
     font-weight: 300;
     font-size: 2.7em;
 }
 
-.principal_main>p {
+.principal_main p {
     width: 50%;
     margin: 0% auto;
 }
@@ -282,6 +246,7 @@ nav ul li>a:hover {
     font-weight: normal;
     font-size: large;
     padding: 5% 0% 0.2% 0%;
+    font-family: 'Playfair Display', serif;
 }
 
 /*contenedor general de imagenes para poder posicionarlo en el grill del layout*/
@@ -290,7 +255,7 @@ nav ul li>a:hover {
     height: auto;
     grid-area: c;
     background-color: white;
-    z-index: 1;
+    z-index: 10;
 }
 
 /*contenedor para aplicar flex y wrap al canvas de imagenes*/
@@ -314,9 +279,6 @@ nav ul li>a:hover {
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
-    z-index: 3;
-
-
 }
 
 .caja_img_main h3 {
@@ -325,8 +287,8 @@ nav ul li>a:hover {
 }
 
 .texto {
-    width: 100em;
-    height: 50em;
+    width: 100%;
+    height: 50%;
     text-align: center;
     font-size: 0.9em;
     padding-top: 1em;
@@ -406,10 +368,8 @@ nav ul li>a:hover {
     background-size: cover;
     background-position: center;
     border-radius: 8px 8px 0px 0px;
-
 }
 
-/*
 /* Página habitaciones */
 .grid_habitaciones {
     display: grid;
@@ -440,16 +400,16 @@ nav ul li>a:hover {
     background-image: url(/media/img/habitaciones.jpg);
     grid-area: s;
     position: fixed;
-  bottom: 15%;
+    bottom: 15%;
 }
 
 .habitaciones {
     width: 100%;
     height: auto;
     grid-area: m;
-    z-index: 1;
+    z-index: 10;
     background-color: white;
-   
+
 }
 
 .texto_main {
@@ -557,7 +517,9 @@ video {
     height: auto;
     background-color: white;
     grid-area: c;
-    z-index: 1;
+    z-index: 10;
+    /*aplicamos este z-index para que no se nos vea la
+    imagen de fondo*/
 
 }
 
@@ -570,7 +532,6 @@ video {
     background-position: top;
     background-size: 100%;
     grid-area: i;
-    z-index: 1;
     background-color: white;
 }
 
@@ -578,12 +539,8 @@ video {
     width: 50%;
     height: 302px;
     grid-area: e;
-    background-color: white;
-    z-index: 1;
     margin: 0% auto;
     margin-top: 3%;
-
-
 }
 
 .masqui {
@@ -593,8 +550,6 @@ video {
     height: 100%;
     margin: 0 auto;
     border: 2px solid lightgrey;
-    ;
-
 }
 
 .masqui p {
@@ -653,6 +608,7 @@ video {
     background-size: 100%;
     background-position: 12% top;
     filter: sepia(1);
+    transition-duration: 1s;
 
 }
 
@@ -814,23 +770,7 @@ video {
     }
 }
 
-@keyframes rebote {
-    0% {
-        top: 10px
-    }
 
-    50% {
-        bottom: 5px;
-    }
-
-    75% {
-        top: 5px;
-    }
-
-    100% {
-        bottom: 5px;
-    }
-}
 
 #primera_hab {
     background-image: url(/media/img/hab1.png);
@@ -1140,7 +1080,8 @@ form {
     grid-row: 1/2;
 
 }
-.input2 span{
+
+.input2 span {
     color: lightgray;
     font-style: italic;
 }
@@ -1219,7 +1160,7 @@ th {
     border-top: 2px solid #333;
     border-bottom: 2px solid #333;
     margin-top: 5%;
-   
+
 }
 
 .footer_contacto h5 {
@@ -1325,7 +1266,6 @@ aside {
 /* footer*/
 footer {
     background-color: lightgray;
-
     grid-area: f;
     width: 100%;
     height: 400px;
@@ -1333,10 +1273,7 @@ footer {
     align-items: center;
     justify-content: center;
     flex-flow: column wrap;
-    z-index: 1;
-
-
-
+    z-index: 10;
 }
 
 .footer_principal {
@@ -1355,7 +1292,7 @@ ellos */
 .logo_trans {
     grid-column: 2/4;
     margin: 10%;
-   
+
 }
 
 .localizacion_footer {
@@ -1394,7 +1331,7 @@ los contenedores div */
     align-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-   
+
 }
 
 .footer_central>img {
@@ -1450,21 +1387,33 @@ los contenedores div */
     padding: 0.1em;
 }
 
-/*media querie header && footer */
-@media screen and (min-width: 425px) and (max-width: 768px) {
-  
-header{
-    padding-top: 2%;
+/*Primera media querie tamaños grandes */
+@media screen and (min-width: 768px) {
+    .grid_index {
+        width: 100vw;
+        height: 100vh;
+    }
 }
 
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+
+    header {
+        padding-top: 2%;
+
+    }
+
     .principal_header {
-        
+
         flex-flow: column wrap;
         justify-content: center;
         flex-direction: column-reverse;
-        padding-bottom: 2%;
+        padding-bottom: 9%;
+    }
 
-    
+    .center {
+        width: 50%;
+
     }
 
     .left_header {
@@ -1472,376 +1421,255 @@ header{
         justify-content: center;
         flex-flow: row wrap;
         width: 60%;
-    
+
     }
+
     .right_header {
         margin-top: 3%;
         margin: 0% auto;
- }
- .right_header > a {
-  margin-left: 6%;/*margen para centrar enlaces*/
-  
-}
+    }
+
+    .right_header>a {
+        margin-left: 6%;
+        /*margen para centrar enlaces*/
+
+    }
 
     nav {
         display: inline-block;
         padding-top: 2%;
-        position: fixed;
-        width: 100%;
-        top: 37.8%;
+        top: 35.8%;
         text-align: center;
-        z-index: 2;
-       
     }
 
     nav ul li {
-      display: inline block;
-      padding: 5%;
-       
+        padding: 5%;
+        padding-top: 2%;
+
     }
 
-    footer {
-        position: relative;
-        bottom: 0%;
-    }
-    .footer_principal{
-        width: auto;
-    }
-    .logo_trans {
-        grid-column: 1/4;
-        grid-row: 1/2;
-        margin-top: 30px;
-      
-       
-    }
-    .localizacion_footer{
-        grid-column: 1/3;
-        grid-row: 3/4;
-      }
-      .footer_central{
-        grid-column: 5/8;
-        grid-row: 1/3;
-        margin-top: 30px;
-        font-size: 0.8em;
-       
-      }
-      .footer_central img{
-        bottom: 60%;
-        right: 80px;
-        
-      }
-      .footer_premios{
-        grid-column: 4/8;
-        grid-row: 2/3;
-        width: 70%;
-        margin-top: 50px;
-        margin-left: 95px;
-       
-      }
-      .imagen1{
-        background-size: 80%;
-      }
-      .imagen2{
-        background-size: 80%;
-      }
-      .footer_social{
-       
-    grid-column: 9/11;
-   }
-footer p{
-    font-size: 0.8em;
-}
+  /* Página index */
+  .grid_index {
+    display: grid;
+    grid-template-areas:
+        'h h h h'
+        'n n n n'
+        's s s s'
+        'm m m m'
+        'm m m m'
+        'c c c c'
+        'c c c c'
+        'c c c c'
+        'c c c c'
+        'c c c c'
+        'c c c c'
+        'f f f f'
+        'f f f f';
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: 36% 6% 45% 27% 55% 70% 70% 70% 70% 70% 70% 100%;
+    width: 100%;
+    height: 100vh;
 }
 
-/*media querie página index*/
-@media screen and (min-width: 425px) and (max-width: 768px) {
+.fondo {
+    bottom: 20%;
+    width: 100%;
+    height: 400px;
+}
 
-    .grid_index {
-        display: grid;
-        grid-template-areas:
-            'h h h h'
-            'n n n n'
-            's s s s'
-            'm m m m'
-            'm m m m'
-            'c c c c'
-            'c c c c'
-            'c c c c'
-            'c c c c'
-            'c c c c'
-            'c c c c'
-            'f f f f'
-            'f f f f';
-        grid-template-columns: repeat(3, 33%);
-        grid-template-rows: 35% 9% 45% 27% 55% 70% 70% 70% 70% 70% 70% 100%;
-        width: 100%;
-        height: 100vh;
-    }
-    .fondo {
-        bottom: 20%;
-        width: 100%;
-        height: 400px;
-    }
-.aviso{
+.aviso {
     width: 43em;
     height: 42px;
     font-size: 0.8rem;
     margin-top: 10%;
 }
-.traveller{
+
+.traveller {
     width: 5%;
-      margin: 22% 15%;
+    margin: 22% 15%;
 }
-.traveller img{
+
+.traveller img {
     width: 100px;
-  
+
 }
-.imagenes{
-   
-}
-.contenedor_imagenes{
+
+.contenedor_imagenes {
     height: auto;
 }
-.caja_img_main{
+
+.caja_img_main {
     width: 90%;
     height: 60vh;
 }
-}
 
+/* Página habitaciones*/
 
-/*media querie pagina contacto*/
-@media screen and (min-width: 425px) and (max-width: 768px) {
-    
-
-    .grid_contacto {
-        display: grid;
-        grid-template-areas:
-            'h h h h'
-            'n n n n'
-            'm m m m'
-            'm m m m'
-            'm m m m'
-            'f f f f';
-        grid-template-columns: repeat(2, 50%);
-        grid-template-rows: 63% 15% 70% 70% 70% 10%;
-        width: 100%;
-        height: 70vh;
-        font-size: 16px;
-        /*Caracteristicas de elemento root*/
-        box-sizing: border-box;
-    }
-    nav {
-        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-        grid-area: n;
-    grid-row: 2/3;
-        font-family: "droid", sans-serif;
-    display: inline-block;
-        width: 100%;
-        height: 6%;
-       
-        background-color: white;
-      
-    
-    }
-    nav ul li {
-        display: inline;
- 
-    }    
-    .cont_general {
-         grid-area: m;
-        display: grid;
-        grid-template-areas:
-            'he'
-            'ma'
-            'ma'
-            'ma'
-            'ma'
-            'ma'
-            'ma'
-            'as'
-            'as'
-            'as'
-            'as'
-            'as'
-            'as'
-            'as'
-            'fo';
-        grid-template-columns: repeat(1, 100%);
-        grid-row-gap: 64px;
-        font-size: 1rem;
-        width: 100%;
-
-    }
-
-    .formulario {
-        max-width: 100%;
-        height: auto;
-        margin: 0% auto;
-        font-size: 1rem;
-  }
-  .formulario p{
-    margin: 0% auto;
-    padding-top: 3%;
-  }
-  .principal_contacto {
-    
+.grid_habitaciones {
+    display: grid;
+    grid-template-areas:
+        'h h h h'
+        'n n n n'
+        's s s s'
+        'm m m m'
+        'm m m m'
+        'm m m m'
+        'c c c c'
+        'c c c c'
+        'c c c c'
+        'c c c c'
+        'c c c c'
+        'c c c c'
+        'f f f f'
+        'f f f f';
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: 36% 6% 35% 20% 60% 70% 70% 90% 90% 90% 90% 150% 50% 20%;
     width: 100%;
-    grid-area: he;
-    text-align: center;
+    height: 100vh;
 }
 
+.fondo_habitaciones {
 
-    form {
-        display: grid;
-        height: auto;
-        grid-area: ma;
-        grid-template-columns: repeat(2, 50%);
-        grid-template-rows: repeat(10, 5%);
-        width: 93%;
-
-        font-family: "Droid" serif;
-        font-size: 1rem;
-        font-weight: 400;
-        max-width: 100%;
-
-
-    }
-
-    .input1 {
-
-        display: flex;
-        flex-direction: column;
-        grid-column: 1/3;
-        grid-row: 1/2;
-
-    }
-
-    .input2 {
-
-        display: flex;
-        flex-direction: column;
-        grid-column: 1/3;
-        grid-row: 2/3;
-
-    }
-
-    .input3 {
-        display: flex;
-        flex-direction: column;
-        grid-column: 1/3;
-        grid-row: 3/4;
-    }
-
-    .input4 {
-        display: flex;
-        flex-direction: column;
-        grid-column: 1/3;
-        grid-row: 4/5;
-    }
-
-    .consulta {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        grid-column: 1/3;
-        grid-row: 5/6;
-    }
-
-    .check {
-        grid-column: 1/3;
-        grid-row: 6/7;
-    }
-
-    .enviar {
-        width: 100%;
-        height: 25px;
-        grid-column: 1/3;
-        grid-row: 7/8;
-      
-    }
-
-    button {
-        width: 100%;
-        padding: 4px;
-        border-radius: 0px 0px 0px 0px;
-        background: none;
-        border: 1px solid #333;
-     
-    }
-
-    table {
-        margin: 0% auto;
-    }
-
-/*parte del aside*/
-.contenedor_aside_arriba {
-    margin-left: 0%;
-    grid-column: 2/3;
-    grid-row: 2/5;
-    border-left: none;
- 
+    background-image: url(/media/img/habitaciones.jpg);
+    grid-area: s;
+    position: fixed;
+    bottom: 20%;
+    height: 400px;
+    background-size: cover;
+    /*cover para llenar el contenedor con la imagen*/
 }
-.contenedor_aside_arriba ul li {
-    padding: 1%;
-    margin-right: 10%;
- text-align: center;
+
+.texto_main p {
+
+    font-size: 1em;
+
 }
-.contenedor_aside_abajo {
-    margin-top: 5%;
-    margin-left: 0%;
-    grid-column: 2/3;
-    grid-row: 5/7;
-    border-left: none;
-  
-}
-.contenedor_aside_abajo ul li {
-    padding: 1%;
-    margin-right: 10%;
- text-align: center;
-}
-.contenedor_social_flex {
+
+.media {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column-reverse;
     height: auto;
-  
-}
-.redes_sociales_aside {
-    width: 30%;
-    margin:0% auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    outline: 1px solid yellow;
+    margin-top: -10%;
 }
 
-.footer_contacto h5{
-    width: 40%; font-size: 1rem;
-}
-}
-/*media querie pagina contacto*/
-@media screen and (min-width: 0px) and (max-width: 425px){
-
-*{
-    font-size: 12px;
-}
-    header{
-}
-.principal_header{
+.media_texto {
+    width: 100%;
+    margin: 0% auto;
 
 }
-.left_header{
+
+.media_texto p {
+    width: 75%;
+    margin: 0% auto;
+}
+
+.media_texto h3 {
+    width: 100%;
+
+}
+
+.media_video {
+    width: 100%;
+
+}
+
+video {
     width: 80%;
+    position: relative;
+    left: 10%;
+    bottom: 30%;
 }
-.right_header{
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row wrap;
+.galeria {
+    width: 90%;
+    margin-top: 10%;
 }
-.right_header > a{
-  width: 40%;
- 
+
+.galeria li {
+    font-size: 14px;
 }
-        .cont_general{ 
+
+.galeria li span {
+    font-size: 24px;
+}
+
+.iglu {
+    width: 90%;
+}
+
+.evento {
+    width: 90%;
+}
+
+.masqui p {
+    font-size: 15px;
+    width: 39%;
+    margin-left: 60%;
+}
+
+.actividades {
+    margin-top: 3%;
+
+}
+
+.contenedor_animaciones {
+    width: 90%;
+    height: 60%;
+    margin-top: 10%;
+
+}
+
+.caja {
+    width: 100%;
+    border-radius: 8px 8px 8px 8px;
+}
+
+#uno {
+
+    background-size: cover;
+}
+
+#dos {
+    background-size: 260%;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+}
+
+.caja_habitaciones {
+    width: 90%;
+}
+
+article {
+    width: 90%;
+}
+
+article p {
+    font-size: 13px;
+}
+
+/* Página contacto */
+.grid_contacto {
+    display: grid;
+    grid-template-areas:
+        'h h h h'
+        'n n n n'
+        'm m m m'
+        'm m m m'
+        'm m m m'
+        'f f f f';
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 33% 5% 70% 70% 70% 8%;
+    width: 100%;
+    height: 100vh;
+    font-size: 16px;
+    /*Caracteristicas de elemento root*/
+    box-sizing: border-box;
+}
+
+.cont_general {
     grid-area: m;
     display: grid;
     grid-template-areas:
@@ -1860,98 +1688,800 @@ footer p{
         'as'
         'as'
         'fo';
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(1, 100%);
     grid-row-gap: 64px;
-   width: 100%;
+    font-size: 1rem;
+    width: 100%;
 }
 
-.formulario{
+.formulario {
     max-width: 100%;
+    height: auto;
     margin: 0% auto;
+    font-size: 1rem;
 }
-.principal_contacto{
-    width: auto;
+
+.formulario p {
+    margin: 0% auto;
+    padding-top: 3%;
+}
+
+.principal_contacto {
+
+    width: 100%;
+    grid-area: he;
     text-align: center;
+}
+
+
+form {
+    display: grid;
+    height: auto;
+    grid-area: ma;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(10, 5%);
+    width: 93%;
+    font-family: "Droid" serif;
+    font-size: 1rem;
+    font-weight: 400;
+    max-width: 100%;
+}
+
+.input1 {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+.input2 {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+.input3 {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+.input4 {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/3;
+    grid-row: 4/5;
+}
+
+.consulta {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    grid-column: 1/3;
+    grid-row: 5/6;
+}
+
+.check {
+    grid-column: 1/3;
+    grid-row: 6/7;
+}
+
+.enviar {
+    width: 100%;
+    height: 25px;
+    grid-column: 1/3;
+    grid-row: 7/8;
+
+}
+
+button {
+    width: 100%;
+    padding: 4px;
+    border-radius: 0px 0px 0px 0px;
+    background: none;
+    border: 1px solid #333;
+
+}
+
+table {
     margin: 0% auto;
 }
-    nav{
-        text-align: center;
-      
+
+/*parte del aside*/
+.contenedor_aside_arriba {
+    margin-left: 0%;
+    grid-column: 2/3;
+    grid-row: 2/5;
+    border-left: none;
+}
+
+.contenedor_aside_arriba ul li {
+    padding: 0.4%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.contenedor_aside_abajo {
+    margin-top: 5%;
+    margin-left: 0%;
+    grid-column: 2/3;
+    grid-row: 5/7;
+    border-left: none;
+
+}
+
+.contenedor_aside_abajo ul li {
+    padding: 0.4%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.contenedor_social_flex {
+    height: auto;
+}
+
+.redes_sociales_aside {
+    width: 30%;
+    margin: 0% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer_contacto h5 {
+    width: 40%;
+    font-size: 1rem;
+}
+
+/* pagina localizacion */
+
+/* utilizo flex para poner el div de horarios delante del div del mapa*/
+.localizacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.grid_localizacion {
+    grid-template-rows: 69% 15% 60% 90% 90% 70%;
+}
+
+.mapa {
+    width: 50vw;
+    left: 2%;
+}
+
+.horario {
+    width: 50vw;
+    position: relative;
+    left: 2%;
+    top: 2%;
+}
+
+    footer {
+        position: relative;
+        bottom: 0%;
     }
-    nav ul li {
-        display: inline;
-        
-        padding: 5%;
-    
-    }
+
+    .footer_principal {
+        width: auto;
     }
 
-/*media querie pagina index*/
-@media screen and (min-width: 0px) and (max-width: 425px){ 
-.grid_index {
-    display: grid;
-    grid-template-areas:
-        'h h h h'
-        'n n n n'
-        's s s s'
-        'm m m m'
-        'm m m m'
-        'c c c c'
-        'c c c c'
-        'c c c c'
-        'c c c c'
-        'c c c c'
-        'c c c c'
-        'f f f f'
-        'f f f f';
-    grid-template-columns: repeat(3, 33%);
-    grid-template-rows: 35% 8% 45% 27% 55% 70% 70% 70% 70% 70% 70% 100%;
-    width: 100%;
-    height: 100vh;
-}
-nav {
+    .logo_trans {
+        grid-column: 1/4;
+        grid-row: 1/2;
+        margin-top: 30px;
+    }
 
-  
+    .localizacion_footer {
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
 
-}nav ul li {
-    display: inline;
-    
-    padding: 5%;
+    .footer_central {
+        grid-column: 5/8;
+        grid-row: 1/3;
+        margin-top: 30px;
+        font-size: 0.8em;
+    }
 
-}
-.fondo {
-    bottom: 20%;
-    width: 100%;
-    height: 400px;
-}
-.aviso{
-width: 43em;
-height: 42px;
-font-size: 0.8rem;
-margin-top: 10%;
-}
-.traveller{
-width: 5%;
-  margin: 22% 15%;
-}
-.traveller img{
-width: 100px;
+    .footer_central img {
+        bottom: 60%;
+        right: 80px;
+    }
 
-}
-.imagenes{
+    .footer_premios {
+        grid-column: 4/8;
+        grid-row: 2/3;
+        width: 70%;
+        margin-top: 50px;
+        margin-left: 95px;
 
-}
-.contenedor_imagenes{
-height: auto;
-}
-.caja_img_main{
-width: 90%;
-height: 60vh;
+    }
+
+    .imagen1 {
+        background-size: 80%;
+    }
+
+    .imagen2 {
+        background-size: 80%;
+    }
+
+    .footer_social {
+
+        grid-column: 9/11;
+    }
+
+    footer p {
+        font-size: 0.8em;
+    }
 }
 
-footer{
+    @media screen and (min-width: 0px) and (max-width: 425px) {
 
-    
+        /*header, nav y footer */
+        .principal_header {
+            flex-flow: column wrap;
+            justify-content: center;
+            flex-direction: column-reverse;
+            padding-bottom: 9%;
+        }
 
-}
-}
+        .left_header {
+            width: 80%;
+        }
+
+        .center {
+            width: 100%;
+        }
+
+        .right_header {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: row wrap;
+        }
+
+        .right_header>a {
+            width: 40%;
+
+        }
+
+        nav {
+            display: inline-block;
+            padding-top: 2%;
+            top: 32%;
+            text-align: center;
+           
+
+        }
+
+        nav ul li {
+            padding: 5%;
+            padding-top: 2%;
+
+        }
+
+
+        .footer_principal {
+            width: auto;
+            font-size: 12px;
+        }
+
+        .logo_trans {
+
+            grid-column: 1/4;
+            grid-row: 1/2;
+            margin-top: 30px;
+        }
+
+        .footer_central {
+            grid-column: 6/10;
+            grid-row: 1/3;
+            margin-top: 30px;
+            font-size: 0.8em;
+
+        }
+
+        .footer_central img {
+
+            right: 60px;
+
+        }
+
+
+        .imagen1 {
+            background-size: contain;
+        }
+
+        .imagen2 {
+            background-size: contain;
+        }
+
+        .footer_premios {
+            grid-column: 4/8;
+            grid-row: 2/3;
+            width: 100%;
+            margin-top: 50px;
+            margin-left: 95px;
+
+        }
+
+        .footer_social {
+
+            grid-column: 8/11;
+            grid-row: 3/4;
+        }
+
+        .localizacion_footer {
+            grid-column: 1/4;
+            grid-row: 3/4;
+        }
+
+        .nombre {
+            font-size: 0.6em;
+        }
+
+        /*pagina index*/
+        .grid_index {
+            display: grid;
+            grid-template-areas:
+                'h h h h'
+                'n n n n'
+                's s s s'
+                'm m m m'
+                'm m m m'
+                'c c c c'
+                'c c c c'
+                'c c c c'
+                'c c c c'
+                'f f f f'
+                'f f f f';
+            grid-template-columns: repeat(3, 33%);
+            grid-template-rows: 35% 8% 45% 27% 55% 70% 70% 70% 70% 50% 50%;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .fondo {
+            bottom: 20%;
+            width: 100%;
+            height: 400px;
+        }
+
+        .aviso {
+            width: 96%;
+            height: 42px;
+            font-size: 0.6rem;
+            margin-top: 10%;
+        }
+
+        .traveller {
+            width: 5%;
+            margin: 22% 15%;
+        }
+
+        .traveller img {
+            width: 100px;
+
+        }
+
+        .principal_main h1 {
+            margin-bottom: 1%;
+            font-family: "Droid", sans-serif;
+            font-weight: 300;
+            font-size: 1.9em;
+        }
+
+        .principal_main p {
+            width: 60%;
+            margin: 0% auto;
+            font-size: 0.9em;
+        }
+
+        .contenedor_imagenes {
+            height: auto;
+        }
+
+        .caja_img_main {
+            width: 90%;
+            height: 40vh;
+            margin-top: 5%;
+        }
+
+        /*pagina habitaciones*/
+        .grid_habitaciones {
+            display: grid;
+            grid-template-areas:
+                'h h h h'
+                'n n n n'
+                's s s s'
+                'm m m m'
+                'm m m m'
+                'm m m m'
+                'c c c c'
+                'c c c c'
+                'c c c c'
+                'c c c c'
+                'c c c c'
+                'c c c c'
+                'f f f f'
+                'f f f f';
+            grid-template-columns: repeat(3, 33%);
+            grid-template-rows: 33% 6% 35% 20% 70% 70% 70% 100% 90% 90% 90% 60% 50% 20%;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .fondo_habitaciones {
+            bottom: 5%;
+            background-position: 70% center;
+            height: 700px;
+            background-size: 700px;
+            background-repeat: no-repeat;
+            outline: 1px solid green;
+        }
+
+        .habitaciones {
+            width: 100vw;
+        }
+
+        .texto_main+p {
+            width: 70%;
+            margin-bottom: 0%;
+        }
+
+        .texto_main h4 {
+            font-size: 15px;
+            margin-top: 10%;
+        }
+
+        .texto_main h1 {
+            font-size: 42px;
+        }
+
+        .texto_main p {
+            font-size: 14px;
+        }
+
+        /* utilizo flex en el div media para posicionar cada parte una encima de la otra*/
+        .media {
+            width: 90vw;
+            height: 30%;
+            margin-bottom: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column-reverse;
+        }
+
+        .media_texto {
+            width: 80%;
+            margin-left: 0%;
+            font-size: 12px;
+        }
+
+        .media_texto h3 {
+            font-size: 15px;
+        }
+
+        .media_video {
+            width: 100%;
+            height: 80%;
+            margin-top: 4%;
+            padding-left: 6%;
+        }
+
+        .galeria {
+            width: 90%;
+            height: 22%;
+            position: relative;
+            bottom: 10%;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
+            margin: 0% auto;
+        }
+
+        .galeria ul, li {
+            width: 100%;
+            margin: 2% auto;
+            font-size: 12px;
+            display: flex;
+            text-align: justify;
+            flex-direction: column;
+            border-bottom: 1px solid lightgrey;
+        }
+
+        .galeria li span {
+            font-size: 20px;
+        }
+
+        .iglu {
+            width: 100%;
+            margin-top: 15%;
+        }
+
+        .evento {
+            width: 90%;
+            height: 10%;
+            margin-top: -30%;
+        }
+
+        .masqui p {
+            margin: 5% auto;
+            width: 90%;
+
+        }
+
+        .masqui img {
+            width: 100%;
+        }
+
+        .masqui h3 {
+            clear: both;
+            /*utilizo clear both porque vengo de un float left*/
+            padding-top: 4%;
+            height: 10%;
+        }
+
+        .actividades {
+            margin-top: 10%;
+            height: 15%;
+        }
+
+        .contenedor_animaciones {
+            display: flex;
+            height: 105%;
+            flex-flow: column wrap;
+
+        }
+
+        .caja {
+            width: 340px;
+            height: 100px;
+        }
+
+        #dos {
+            height: 20%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .descripcion_habitaciones {
+            margin-top: 25%;
+        }
+
+        .caja_habitaciones {
+            width: 90%;
+            height: 300px;
+        }
+
+        .back {
+            height: 300px;
+        }
+
+        .texto_descripcion {
+            font-size: 00.7em;
+        }
+
+        #primera_hab {
+            background-position: center;
+        }
+
+        article {
+            width: 90%;
+            outline: 1px solid yellowgreen;
+        }
+
+        article p {
+            font-size: 10px;
+        }
+
+        /* Página de contacto */
+        .grid_contacto {
+            display: grid;
+            grid-template-areas:
+                'h h h h'
+                'n n n n'
+                'm m m m'
+                'm m m m'
+                'm m m m'
+                'f f f f';
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: 33% 5% 70% 70% 70% 45%;
+            width: 100%;
+            height: 100vh;
+            /*Caracteristicas de elemento root*/
+            box-sizing: border-box;
+        }
+
+        .cont_general {
+            grid-area: m;
+            display: grid;
+            grid-template-areas:
+                'he'
+                'ma'
+                'ma'
+                'ma'
+                'ma'
+                'ma'
+                'ma'
+                'as'
+                'as'
+                'as'
+                'as'
+                'as'
+                'as'
+                'as'
+                'fo';
+            grid-template-columns: 1;
+            grid-row-gap: 64px;
+            font-size: 12px;
+            width: 100vw;
+        }
+
+        .principal_contacto {
+            width: 100%;
+            grid-area: he;
+            text-align: center;
+            margin: 0% auto;
+        }
+
+        .principal_contacto h4 {
+            width: 60%;
+            font-size: 2em;
+
+        }
+
+        .principal_contacto h1 {
+            width: 60%;
+        }
+
+        .principal_contacto p {
+            width: 60%;
+        }
+
+        .formulario {
+
+            margin: 0% auto;
+
+        }
+
+        form {
+            width: 80%;
+            grid-template-columns: repeat(3, 33%);
+            grid-template-rows: repeat(10, 5%);
+        }
+
+        .input1 {
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+
+        .input2 {
+            grid-column: 1/3;
+            grid-row: 2/3;
+        }
+
+        .input3 {
+            grid-column: 1/3;
+            grid-row: 3/4;
+        }
+
+        .input4 {
+            grid-column: 1/3;
+            grid-row: 4/5;
+        }
+
+        .consulta {
+            width: 100%;
+            grid-column: 1/3;
+            grid-row: 5/6;
+        }
+
+        .check {
+            grid-column: 1/3;
+            grid-row: 6/7;
+        }
+
+        .enviar {
+            grid-column: 1/3;
+            grid-row: 7/8;
+
+        }
+
+        button {
+            width: 100%;
+        }
+
+        .formulario table {
+            width: 60%;
+            margin: 0%;
+        }
+
+        .contenedor_aside_arriba {
+            width: 50%;
+            border-left: none;
+        }
+
+        .contenedor_aside_arriba ul li {
+            padding: 0.4%;
+            margin-left: 0%;
+            text-align: center;
+            border: none;
+        }
+
+        .contenedor_aside_arriba img {
+            margin: 0% auto;
+        }
+
+        .contenedor_aside_abajo {
+            width: 50%;
+            border: none;
+        }
+
+        .contenedor_aside_abajo ul li {
+            padding: 0.4%;
+            margin-left: 0%;
+            text-align: center;
+            border: none;
+        }
+
+        .redes_sociales_aside {
+            width: 30%;
+            margin: 0% auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .footer_contacto {
+            width: 65%;
+            font-size: 0.6rem;
+
+        }
+
+        .footer_contacto h5 {
+            width: 50%;
+            font-size: 0.8rem;
+        }
+
+        /*página localización*/
+
+        .localizacion {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column-reverse;
+        }
+
+        .grid_localizacion {
+            grid-template-rows: 65% 10% 60% 90% 90% 70%;
+        }
+
+        .horario ul,
+        li {
+            border: none;
+        }
+
+        .mapa {
+            width: 90vw;
+            left: 0%;
+        }
+
+        .horario {
+            width: 90vw;
+            position: relative;
+            left: 0%;
+            top: 2%;
+            font-size: 0.8rem;
+        }
+    }
