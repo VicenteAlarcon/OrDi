@@ -312,7 +312,7 @@ nav ul li>a:hover {
     background-image: url(/media/img/index/img1.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top 3em;
+    background-position: top;
     border-radius: 8px 8px 0px 0px;
 }
 
@@ -546,7 +546,7 @@ video {
 .masqui {
     width: 100%;
     text-align: center;
-    font-family: 'Roboto' sans-serif;
+    font-family: 'Roboto', sans-serif;
     height: 100%;
     margin: 0 auto;
     border: 2px solid lightgrey;
@@ -631,7 +631,7 @@ video {
 
 #dos:hover {
     filter: none;
-    transform: scale(60%) rotate(20deg);
+    transform: scale(0.6) rotate(20deg);
     transition-duration: 1s;
 }
 
@@ -640,7 +640,7 @@ video {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    filter: grayscale();
+    filter: grayscale(1);
     transition-duration: 1s;
 }
 
@@ -818,13 +818,6 @@ video {
     background-image: url(/media/img/hab9.png);
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-
-
-/*utilizo este id para poner el contenido en la dirección contraria */
-#reverse {
-    flex-direction: row-reverse;
 }
 
 article {
@@ -1058,7 +1051,7 @@ form {
     grid-template-rows: repeat(6, 10%);
     grid-column-gap: 40px;
     grid-row-gap: 24px;
-    font-family: "Droid" serif;
+    font-family: "Droid", serif;
     font-size: 0.75rem;
     font-weight: 400;
 
@@ -1122,7 +1115,7 @@ button {
 }
 
 table {
-    font-family: "Droid" serif;
+    font-family: "Droid", serif;
     font-size: 0.75rem;
     font-weight: 400;
     width: 600px;
@@ -1142,7 +1135,7 @@ th {
 
 .formulario p {
     margin-left: 4%;
-    font-family: "Droid" serif;
+    font-family: "Droid", serif;
     font-size: 0.75rem;
     font-weight: 400;
 }
@@ -1721,7 +1714,7 @@ form {
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(10, 5%);
     width: 93%;
-    font-family: "Droid" serif;
+    font-family: "Droid", serif;
     font-size: 1rem;
     font-weight: 400;
     max-width: 100%;
@@ -2321,7 +2314,7 @@ table {
                 'as'
                 'as'
                 'fo';
-            grid-template-columns: 1;
+            grid-template-columns: 1fr;
             grid-row-gap: 64px;
             font-size: 12px;
             width: 100vw;

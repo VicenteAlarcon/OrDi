@@ -59,19 +59,19 @@
 <form action="/contacto.php" method="get">
   <div class="input1">
  <label for="nombre">Nombre</label>
- <input type="text" name="nombre" minlength="5" maxlength="40" required pattern="[A-Za-z]+"> 
+ <input type="text" id="nombre" minlength="5" maxlength="40" required pattern="[A-Za-z]+"> 
 </div>
 <div class="input2">           
  <label for="ciudad">Ciudad <span>Opcional</span></label>
- <input type="text" name="ciudad" required pattern="[A-Za-z]+">
+ <input type="text" id="ciudad" required pattern="[A-Za-z]+">
  </div>
  <div class="input3"> 
  <label for="mail">Email</label>
- <input type="email" name="mail" required pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
+ <input type="email" id="mail" required pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
  </div>
 <div class="input4">
  <label for="telefono">Teléfono</label>
- <input type="tel" name="telefono" minlength="6" required pattern="[0-9]+">
+ <input type="tel" id="telefono" minlength="6" required pattern="[0-9]+">
 </div>
 <div class="consulta">
    <label for="consulta">Consulta</label>
@@ -88,7 +88,7 @@
 
 <table>
   <tr>
-    <td  colspan="2">Información Básica sobre Protección de datos</span></td>
+    <td  colspan="2">Información Básica sobre Protección de datos</td>
   </tr>
   <tr>
     <td>Responsable:</td>
@@ -186,7 +186,14 @@
 
       </div>
       <p class="nombre">Actividad realizada para el módulo de lenguajes de marcas. Curso 2022/2023. Vicente Alarcón González</p>
-
+      <p>
+          <a href="http://jigsaw.w3.org/css-validator/check/referer">
+              <img style="border:0;width:88px;height:31px"
+                  src="http://jigsaw.w3.org/css-validator/images/vcss"
+                  alt="¡CSS Válido!" />
+          </a>
+      </p>
+                  
     
 
 
